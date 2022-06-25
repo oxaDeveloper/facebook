@@ -1,0 +1,154 @@
+.header {
+  display: flex;
+  padding: 15px 20px;
+  justify-content: space-between;
+  position: sticky;
+  background-color: white;
+  z-index: 100;
+  top: 0;
+  box-shadow: 0px 5px 8px -9px #000000bf;
+}
+
+.header__left {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header__input {
+  display: flex;
+  align-items: center;
+  background-color: #eff2f5;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 999px;
+}
+
+.header__img {
+  height: 40px;
+}
+
+.header__input > input {
+  background-color: transparent;
+  border: none;
+  outline-width: 0;
+}
+
+.header__center {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.header__option > .MuiSvgIcon-root {
+  color: grey;
+}
+
+.header__option:hover > .MuiSvgIcon-root {
+  color: #2e81f4;
+}
+
+.header__option--active > .MuiSvgIcon-root {
+  color: #2e81f4;
+}
+
+.header__option--active {
+  border-bottom: 4px solid #2e81f4;
+}
+
+.header__option {
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  cursor: pointer;
+}
+
+.header__option:hover {
+  background-color: #eff2f5;
+  border-radius: 10px;
+  align-items: center;
+  padding: 0 30px;
+  border-bottom: none;
+}
+
+.header__info {
+  display: flex;
+  align-items: center;
+}
+
+.header__info > h4 {
+  margin-left: 10px;
+}
+
+.header__right {
+  display: flex;
+}
+
+/* Media */
+@media screen and (min-width: 424px) {
+  .header__mobileImg {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    width: 925px;
+  }
+
+  .header__option > .MuiSvgIcon-root {
+    width: 30px;
+  }
+
+  .header__option--active {
+    border-bottom: 2px solid #2e81f4;
+  }
+
+  .header__right > .header__right__icons {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header {
+    height: 80px;
+  }
+
+  .header__img {
+    display: none;
+  }
+
+  .header__mobileImg {
+    width: 250px;
+    display: block;
+    margin-left: -30px;
+    margin-right: -70px;
+  }
+
+  .header__center {
+    display: none;
+  }
+
+  .header__input {
+    width: 380px;
+    height: 55px;
+    margin-left: 70px;
+  }
+
+  .header__input > input {
+    font-size: 30px;
+  }
+
+  .header__input > .MuiSvgIcon-root {
+    height: 40px;
+    width: 50px;
+  }
+
+  .header__info > .MuiAvatar-root {
+    width: 65px;
+    height: 65px;
+  }
+
+  .header__info > h4 {
+    font-size: 29px;
+  }
+}
